@@ -1,0 +1,9 @@
+apiVersion: metering.openshift.io/v1
+kind: Report
+metadata:
+  name: list-all-projects-v1-hourly
+  namespace: openshift-metering
+spec:
+  query: list-all-projects-v1
+  schedule:
+    period: hourly

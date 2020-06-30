@@ -1,0 +1,9 @@
+apiVersion: metering.openshift.io/v1
+kind: Report
+metadata:
+  name: namespace-cpu-request-hourly
+  namespace: openshift-metering
+spec:
+  query: namespace-cpu-request
+  schedule:
+    period: hourly

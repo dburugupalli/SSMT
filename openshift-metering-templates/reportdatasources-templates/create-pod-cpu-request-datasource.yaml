@@ -1,0 +1,13 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+# example file where we can view the prometheus queries 
+apiVersion: metering.openshift.io/v1
+kind: ReportDataSource
+metadata:
+  name: pod-request-cpu-cores
+  namespace: openshift-metering
+spec:
+  prometheusMetricsImporter:
+    query: |
+      sum(kube_pod_container_resource_requests_cpu_cores) by (pod, namespace, node)

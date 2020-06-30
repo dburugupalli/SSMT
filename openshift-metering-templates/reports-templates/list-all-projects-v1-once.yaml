@@ -1,0 +1,10 @@
+apiVersion: metering.openshift.io/v1
+kind: Report
+metadata:
+  name: list-all-projects-v1-once
+  namespace: openshift-metering
+spec:
+  query: list-all-projects-v1
+  reportingEnd: '2020-12-30T23:59:59Z'
+  reportingStart: '2020-05-01T00:00:00Z'
+  runImmediately: true
